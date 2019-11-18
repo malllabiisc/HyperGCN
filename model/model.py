@@ -60,7 +60,7 @@ def test(HyperGCN, dataset, t, args):
     X, Y = dataset['features'], dataset['labels']
     
 
-    Z = hypergcn(X)
+    Z = hypergcn(X) 
     return accuracy(Z[t], Y[t])
     
 
