@@ -14,7 +14,8 @@ Source code for [NeurIPS 2019](https://iclr.cc/) paper: [**HyperGCN: A New Metho
 
 ### Dataset:
 
-- DBLP dataset used in the paper is included in the `data` directory. The provided code is only for link prediction task
+- DBLP dataset used in the paper is included in the `data` directory.
+- Other datasets (Cora, Citeseer, Pubmed) used in the paper can be downloaded from [here](https://linqs.soe.ucsc.edu/data)
 
 ### Training model (Node classifiction):
 
