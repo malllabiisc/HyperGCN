@@ -11,34 +11,22 @@ Source code for [NeurIPS 2019](https://iclr.cc/) paper: [**HyperGCN: A New Metho
 ### Dependencies
 
 - Compatible with PyTorch 1.0 and Python 3.x.
-- Dependencies can be installed using `requirements.txt`.
 
 ### Dataset:
 
-- We use FB15k-237 and WN18RR dataset for knowledge graph link prediction. 
-- FB15k-237 and WN18RR are included in the `data` directory. The provided code is only for link prediction task
+- DBLP dataset used in the paper is included in the `data` directory. The provided code is only for link prediction task
 
-### Training model (Link Prediction):
-
-- Install all the requirements from `requirements.txt.`
-
-- Execute `sh preprocess.sh` for extracting the dataset.
+### Training model (Node classifiction):
 
 - To start training run:
 
   ```shell
-  python run.py -name test_run -model compgcn -score_func conve -opn corr -gpu 0 -data FB15k-237
+  python hypergcn.py -mediators True -split 0
   ```
 
-  - `-score_func` denotes the link prediction score score function 
-  - `-opn` is the composition operation used in **CompGCN**. It can take the following values:
-    - `sub` for subtraction operation:  Φ(e_s, e_r) = e_s - e_r
-    - `mult` for multiplication operation:  Φ(e_s, e_r) = e_s * e_r
-    - `corr` for circular-correlation: Φ(e_s, e_r) = e_s ★ e_r
-  - `-name` is some name given for the run (used for storing model parameters)
-  - `-model` is name of the model `compgcn'.
-  - `-gpu` for specifying the GPU to use
-  - Rest of the arguments can be listed using `python run.py -h`
+  - `-mediators` denotes whether to use mediators (True) or not (False) 
+  - `-split` is the train-test split number
+  
 
 ### Citation:
 
