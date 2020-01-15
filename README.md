@@ -6,7 +6,7 @@ Source code for [NeurIPS 2019](https://iclr.cc/) paper: [**HyperGCN: A New Metho
 
 ![](./hmlap.png)
 
-**Overview of HyperGCN:** *Given a hypergraph and vertex features, HyperGCN approximates the Hypergraph by a graph in which each hyperedge is approximated by a subgraph consiting of an edge between maximally disparate vertices and edges between each and every other vertex (mediator) of the hyperedge.*
+**Overview of HyperGCN:** *Given a hypergraph and vertex features, HyperGCN approximates the Hypergraph by a graph in which each hyperedge is approximated by a subgraph consiting of an edge between maximally disparate vertices and edges between each and every other vertex (mediator) of the hyperedge. A graph convolutional network (GCN) is then run on the resulting graph approximation. *
 
 ### Dependencies
 
