@@ -31,8 +31,6 @@ Source code for [NeurIPS 2019](https://nips.cc/) paper: [**HyperGCN: A New Metho
 
 ### Citation:
 
-Please cite the following paper if you use this code in your work.
-
 ```bibtex
 @incollection{hypergcn_neurips19,
 title = {HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs},
