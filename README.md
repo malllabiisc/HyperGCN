@@ -33,14 +33,13 @@ Source code for [NeurIPS 2019](https://iclr.cc/) paper: [**HyperGCN: A New Metho
 Please cite the following paper if you use this code in your work.
 
 ```bibtex
-@inproceedings{
-    vashishth2020compositionbased,
-    title={Composition-based Multi-Relational Graph Convolutional Networks},
-    author={Shikhar Vashishth and Soumya Sanyal and Vikram Nitin and Partha Talukdar},
-    booktitle={International Conference on Learning Representations},
-    year={2020},
-    url={https://openreview.net/forum?id=BylA_C4tPr}
+@incollection{hypergcn_neurips19,
+title = {HyperGCN: A New Method For Training Graph Convolutional Networks on Hypergraphs},
+author = {Yadati, Naganand and Nimishakavi, Madhav and Yadav, Prateek and Nitin, Vikram and Louis, Anand and Talukdar, Partha},
+booktitle = {Advances in Neural Information Processing Systems (NeurIPS) 32},
+pages = {1509--1520},
+year = {2019},
+publisher = {Curran Associates, Inc.}
 }
-```
 
-For any clarification, comments, or suggestions please create an issue or contact [Shikhar](http://shikhar-vashishth.github.io).
+```
