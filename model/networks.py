@@ -20,6 +20,7 @@ class HyperGCN(nn.Module):
         h = [d]
         for i in range(l-1):
             power = l - i + 2
+            if args.dataset == 'citeseer': power = l - i + 4
             h.append(2**power)
         h.append(c)
 

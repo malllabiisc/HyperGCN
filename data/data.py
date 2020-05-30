@@ -48,13 +48,13 @@ class parser(object):
         returns a dataset specific function to parse
         """
         
-        name = "_" + self.dataset + "_" + self.data
+        name = "_load_data"
         function = getattr(self, name, lambda: {})
         return function()
 
 
 
-    def _dblp_coauthorship(self):
+    def _load_data(self):
         """
         loads the coauthorship hypergraph, features, and labels of cora
 
@@ -69,6 +69,7 @@ class parser(object):
         
         with open(os.path.join(self.d, 'hypergraph.pickle'), 'rb') as handle:
             hypergraph = pickle.load(handle)
+            print("number of hyperedges is", len(hypergraph))
 
         with open(os.path.join(self.d, 'features.pickle'), 'rb') as handle:
             features = pickle.load(handle).todense()

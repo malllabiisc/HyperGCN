@@ -12,21 +12,17 @@ Source code for [NeurIPS 2019](https://nips.cc/) paper: [**HyperGCN: A New Metho
 
 - Compatible with PyTorch 1.0 and Python 3.x.
 
-### Dataset:
-
-- DBLP dataset used in the paper is included in the `data` directory.
-- Other datasets (Cora, Citeseer, Pubmed) used in the paper can be downloaded from [here](https://linqs.soe.ucsc.edu/data)
 
 ### Training model (Node classifiction):
 
 - To start training run:
 
   ```shell
-  python hypergcn.py -mediators True -split 0
+  python hypergcn.py --mediators True --split 1 --data coauthorship --dataset dblp
   ```
 
-  - `-mediators` denotes whether to use mediators (True) or not (False) 
-  - `-split` is the train-test split number
+  - `--mediators` denotes whether to use mediators (True) or not (False) 
+  - `--split` is the train-test split number
   
 
 ### Citation:

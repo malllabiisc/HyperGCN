@@ -42,7 +42,7 @@ class HyperGraphConvolution(Module):
         if self.cuda: A = A.cuda()
         A = Variable(A)
 
-        AHW = SparseMM()(A, HW)     
+        AHW = SparseMM.apply(A, HW)     
         return AHW + b
 
 
@@ -57,26 +57,24 @@ class HyperGraphConvolution(Module):
 class SparseMM(torch.autograd.Function):
     """
     Sparse x dense matrix multiplication with autograd support.
-
     Implementation by Soumith Chintala:
     https://discuss.pytorch.org/t/
     does-pytorch-support-autograd-on-sparse-matrix/6156/7
     """
-
-    def forward(self, M1, M2):
-        self.save_for_backward(M1, M2)
+    @staticmethod
+    def forward(ctx, M1, M2):
+        ctx.save_for_backward(M1, M2)
         return torch.mm(M1, M2)
 
-
-
-    def backward(self, g):
-        M1, M2 = self.saved_tensors
+    @staticmethod
+    def backward(ctx, g):
+        M1, M2 = ctx.saved_tensors
         g1 = g2 = None
 
-        if self.needs_input_grad[0]:
+        if ctx.needs_input_grad[0]:
             g1 = torch.mm(g, M2.t())
 
-        if self.needs_input_grad[1]:
+        if ctx.needs_input_grad[1]:
             g2 = torch.mm(M1.t(), g)
 
         return g1, g2
