@@ -1,6 +1,6 @@
 # HyperGCN: A New Method of Training Graph Convolutional Networks on Hypergraphs
 
-[![Conference](http://img.shields.io/badge/NeurIPS-2019-4b44ce.svg)](https://iclr.cc/) [![Paper](http://img.shields.io/badge/paper-arxiv.1809.02589-B31B1B.svg)](https://arxiv.org/abs/1809.02589) 
+[![Conference](http://img.shields.io/badge/NeurIPS-2019-4b44ce.svg)](https://nips.cc/) [![Paper](http://img.shields.io/badge/paper-arxiv.1809.02589-B31B1B.svg)](https://arxiv.org/abs/1809.02589) 
 
 Source code for [NeurIPS 2019](https://nips.cc/) paper: [**HyperGCN: A New Method of Training Graph Convolutional Networks on Hypergraphs**](https://papers.nips.cc/paper/8430-hypergcn-a-new-method-for-training-graph-convolutional-networks-on-hypergraphs)
 
