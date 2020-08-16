@@ -11,7 +11,7 @@ Source code for [NeurIPS 2019](https://nips.cc/) paper: [**HyperGCN: A New Metho
 ### Dependencies
 
 - Compatible with PyTorch 1.0 and Python 3.x.
-
+- For a dataset (and/or splits) not used in the paper, please consider tuning hyperparameters such as hidden size, learning rate, seed, etc.
 
 ### Training model (Node classifiction):
 
